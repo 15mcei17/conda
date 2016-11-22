@@ -1,0 +1,45 @@
+Current conda install:
+
+               platform : linux-64
+          conda version : 4.2.12
+       conda is private : False
+      conda-env version : 4.2.12
+    conda-build version : not installed
+         python version : 2.7.12.final.0
+       requests version : 2.11.1
+       root environment : /home/ubuntu/miniconda2  (writable)
+    default environment : /home/ubuntu/miniconda2
+       envs directories : /home/ubuntu/miniconda2/envs
+          package cache : /home/ubuntu/miniconda2/pkgs
+           channel URLs : https://conda.anaconda.org/conda-forge/linux-64
+                          https://conda.anaconda.org/conda-forge/noarch
+                          https://repo.continuum.io/pkgs/free/linux-64
+                          https://repo.continuum.io/pkgs/free/noarch
+                          https://repo.continuum.io/pkgs/pro/linux-64
+                          https://repo.continuum.io/pkgs/pro/noarch
+            config file : /home/ubuntu/.condarc
+           offline mode : False
+
+
+
+`$ /home/ubuntu/miniconda2/bin/conda create -n bob_env_py27 python=2.7 bob`
+
+
+
+
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/conda/exceptions.py", line 479, in conda_exception_handler
+        return_value = func(*args, **kwargs)
+      File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/conda/cli/main.py", line 145, in _main
+        exit_code = args.func(args, p)
+      File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/conda/cli/main_create.py", line 68, in execute
+        install(args, parser, 'create')
+      File "/home/ubuntu/miniconda2/lib/python2.7/site-packages/conda/cli/install.py", line 420, in install
+        raise CondaRuntimeError('RuntimeError: %s' % e)
+    CondaRuntimeError: Runtime error: RuntimeError: Runtime error: Connection error: HTTPSConnectionPool(host='conda.anaconda.org', port=443): Max retries exceeded with url: /conda-forge/linux-64/pango-1.40.1-0.tar.bz2 (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f8c4b05d6d0>: Failed to establish a new connection: [Errno -2] Name or service not known',)): https://conda.anaconda.org/conda-forge/linux-64/pango-1.40.1-0.tar.bz2
+    
+
+ubuntu@ubuntu-desktop:~$ conda create -n bob_env_py27 python=2.7 bob
+
+
+CondaValueError: Value error: prefix already exists: /home/ubuntu/miniconda2/envs/bob_env_py27
